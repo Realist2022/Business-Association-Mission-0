@@ -1,0 +1,67 @@
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  color: white;
+  font-style: normal;
+}
+
+.heroSubTitle {
+  font-size: 1.5rem;
+  color: rgb(255, 40, 0);
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.heroContent {
+  text-align: center;
+  position: absolute;
+  width: 70%;
+  padding: 20px;
+}
+
+.heroInput{
+  margin-top: 150px;
+  width: 18rem;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+
+.FontAwesomeIcon{
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.FontAwesomeIconButton{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}

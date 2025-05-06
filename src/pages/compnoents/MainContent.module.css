@@ -1,0 +1,24 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  background-color: blueviolet;
+}
+
+.cardDivs {
+  text-align: center;
+  width: 300px;
+  margin: 50px;
+  border: 5px solid rgb(255, 40, 0);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: white;
+}
+
+.cardImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
