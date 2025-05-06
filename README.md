@@ -17,7 +17,7 @@ If you are developing a production application, we recommend using TypeScript wi
 3. Installed font awesome
 
 ## Git Installation
-1.Git init
-2.git clone (https://github.com/Realist2022/Business-Association-Mission-0.git).
+1. Git init
+2. git clone (https://github.com/Realist2022/Business-Association-Mission-0.git)
 
 
