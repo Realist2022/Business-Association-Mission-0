@@ -15,7 +15,7 @@
 /* Logo */
 .logo {
   position: static;
-  margin: 0;
+  margin: 0px;
   height: 70px;
   width: auto;
   margin-right: 20px;
@@ -145,12 +145,26 @@
   margin-right: 10px;
 }
 
-/* Optional: Media query adjustments */
-@media (max-width: 768px) {
+.FontAwesomeIconBars{
+  display: none; /* Hide the bars icon by default */
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Adjust things under 900px */
+@media (max-width: 900px) {
+
+  .FontAwesomeIconBars{
+    display: block; 
+    margin-left: 10px;
+    width: auto;
+    height: 30px;
+  }
+
   .navbar {
     height: auto;
     justify-content: space-between;
-    padding: 10px 20px;
   }
 
   /* Adjustments for the main nav links container */
@@ -181,12 +195,7 @@
   }
 
    .loginAndSignupNavButtons {
-      width: auto;
-      padding: 6px 8px; 
-      font-size: 12px;
-      height: 30px; 
-      margin: 0 2px; 
-   }
+    display: none; /* Hide the buttons on smaller screens */
 }
 
 .FontAwesomeIcon{
@@ -194,4 +203,5 @@
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
 }
