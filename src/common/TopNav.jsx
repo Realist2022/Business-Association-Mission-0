@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './TopNav.module.css';
-import logo from '../images/MA_logo.webp'; // Assuming you have a logo image
+import logo from '../images/MA_logo.webp'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 function TopNav() {
@@ -10,10 +11,10 @@ function TopNav() {
     <div className={styles.navbar}>
 
       {/* LOGO */}
-      <img src={logo} className={styles.logo} alt="Company Logo" /> {/* Added alt text */}
+      <img src={logo} className={styles.logo} alt="Company Logo" /> 
 
       {/* TOP NAV MAIN CONTENT - WRAPPED IN A CONTAINER */}
-      <div className={styles.mainNavLinks}> {/* New container div */}
+      <div className={styles.mainNavLinks}> 
         <a href="#home">Home</a>
         <a href="#news">News</a>
 
@@ -28,12 +29,13 @@ function TopNav() {
             <a href="#">Link 3</a>
           </div>
         </div>
-      </div> {/* End of new container div */}
+      </div> 
 
 
       {/* LOGIN AND SIGNUP */}
       <div className={styles.loginAndSignupNav}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.FontAwesomeIcon}  />
+        {/* <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.FontAwesomeIcon}  /> */}
+        <FontAwesomeIcon icon={faBars} className={styles.FontAwesomeIconBars}/>
         <button className={styles.loginAndSignupNavButtons}>Login</button>
         <button className={styles.loginAndSignupNavButtons}>Sign up</button>
       </div>

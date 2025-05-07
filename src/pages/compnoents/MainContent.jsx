@@ -1,27 +1,34 @@
+// src/components/MainContent/MainContent.js
 import React from "react";
 import styles from '../compnoents/MainContent.module.css'; // Adjust the path as necessary
-import buildingBlocks from '../../images/buildingBlocks.png'; // Assuming you have a logo image
-import aiMarketing from '../../images/AiMarketing.png'; // Assuming you have a logo image
-import digitalStrategy from '../../images/digitalStrategy.png'; // Assuming you have a logo image
+// REMOVE direct image imports if they are only used in the data file
+// REMOVE direct data import
 
-function MainContent() {
+// Accept cardData (the full list) and searchTerm as props
+function MainContent({ cardData, searchTerm }) {
+
+  // Filter the cardData based on the searchTerm
+  const filteredData = cardData.filter(item =>
+    // Convert both title/description and searchTerm to lowercase for case-insensitive search
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className={styles.cardContainer} >
-      <div className={styles.cardDivs}> 
-        <img src={buildingBlocks} className={styles.cardImage} />
-        <h1>Building Blocks of planned strategy </h1>
-        <p>Whether you're looking for the tools to build your brand from the ground up or you're having trouble positioning yourself in a saturated market, this workshop gives you the planning tools you need from an industry-leading brand strategist.</p>
-      </div>
-      <div className={styles.cardDivs}>
-        <img src={aiMarketing} className={styles.cardImage}  />
-        <h1>Card 1</h1>
-        <p>This is the card 1 area.</p>
-      </div>
-      <div className={styles.cardDivs}>
-        <img src={digitalStrategy} className={styles.cardImage}  />
-        <h1>Card 2</h1>
-        <p>This is the card 2 area.</p>
-      </div>
+    <div className={styles.cardContainer}>
+      {/* Map over the filteredData instead of the original data */}
+      {filteredData.map((item) => (
+        <div key={item.id} className={styles.cardDivs}>
+          <img src={item.image} className={styles.cardImage} alt={item.title} /> {/* Added alt text */}
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
+        </div>
+      ))}
+
+      {/* Optional: Display a message if no results are found and the search term is not empty */}
+      {filteredData.length === 0 && searchTerm !== '' && (
+          <p>No results found for "{searchTerm}"</p>
+      )}
     </div>
   );
 }
