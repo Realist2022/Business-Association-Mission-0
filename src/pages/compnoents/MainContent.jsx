@@ -8,9 +8,9 @@ function MainContent({ cardData, searchTerm }) {
 
   // Filter the cardData based on the searchTerm
   const filteredData = cardData.filter(item =>
-    // convert all incoming search terms to lowercase and check if input matches title or description
-    item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    // convert all incoming search terms to lowercase and check if input matches title 
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) 
+    // item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (

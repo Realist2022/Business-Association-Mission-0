@@ -21,8 +21,8 @@ function Hero({ searchTerm, handleSearchChange }) {
 
       {/* HERO CONTENT */}
       <div className={styles.heroContent}>
-        <p className={styles.heroSubTitle}>Helping marketers</p>
-        <h1 className={styles.heroTitle}>BRILLIANCE</h1>
+        <p className={styles.heroSubTitle}><i>Helping marketers be</i></p>
+        <h1 className={styles.heroTitle}>BRILLIANT</h1>
         {/* SEARCH INPUT FIELD */}
         <form onSubmit={handleSearchSubmit}>
           <input
