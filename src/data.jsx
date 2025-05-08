@@ -8,7 +8,7 @@ const data = {
       id: 1,
       image: AiMarketing,
       title: "AI Marketing",
-      description: "This is the AI Marketing workshop.",
+      description: "Empower your marketing team to harness the potential of AI with our comprehensive masterclass designed specifically for marketers. This full-day workshop will equip your team with the practical knowledge, hands-on experience, and strategic mindset necessary to effectively integrate AI into your organisation's marketing efforts and drive immediate results.",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const data = {
       id: 3,
       image: digitalStrategy,
       title: "Digital Strategy",
-      description: "This is the Digital Strategy workshop.",
+      description: "As a result, the need to understand digital resources, assets, tools, and channels is key. This short course will provide an in-depth view of those digital elements, and how they combine to contribute to a digital strategy.",
     },
   ],
 };
