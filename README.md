@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-### Brief description
+# Brief description
 Main target for this was to implement CSS design and making it responsive for mobile view. I have added a little extra, like the search functionality thats Based on the title heading of the news cards. Also added a scroll to top button. It does differ a little from the wire frame as there wasn't enough designer info to implement, but it is based on the main concepts and structure of it..
 
 ## Getting started with project: 
