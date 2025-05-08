@@ -3,6 +3,7 @@ import TopNav from "../../common/TopNav.jsx";
 import MainContent from "../compnoents/MainContent.jsx";
 import { useState } from "react";
 import data from "../../data.jsx"; 
+import Footer from "../../common/Footer.jsx";
 
 function Home() {
   // State to hold the search term
@@ -26,6 +27,8 @@ function Home() {
         cardData={data.cardData} // Pass the complete list
         searchTerm={searchTerm} // Pass the current search term
       />
+
+      <Footer />
     </div>
   );
 }

@@ -1,16 +1,15 @@
 // src/components/MainContent/MainContent.js
 import React from "react";
-import styles from '../compnoents/MainContent.module.css'; // Adjust the path as necessary
-// REMOVE direct image imports if they are only used in the data file
-// REMOVE direct data import
+import styles from '../compnoents/MainContent.module.css'; 
 
-// Accept cardData (the full list) and searchTerm as props
+
+// Props passed down from home page
 function MainContent({ cardData, searchTerm }) {
 
   // Filter the cardData based on the searchTerm
   const filteredData = cardData.filter(item =>
-    // Convert both title/description and searchTerm to lowercase for case-insensitive search
-    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    // convert all incoming search terms to lowercase and check if input matches title or description
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -20,15 +19,11 @@ function MainContent({ cardData, searchTerm }) {
       {filteredData.map((item) => (
         <div key={item.id} className={styles.cardDivs}>
           <img src={item.image} className={styles.cardImage} alt={item.title} /> {/* Added alt text */}
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
+          <h1 className={styles.cardTitle} >{item.title}</h1>
+          <p className={styles.cardContent} >{item.description}</p>
         </div>
       ))}
 
-      {/* Optional: Display a message if no results are found and the search term is not empty */}
-      {filteredData.length === 0 && searchTerm !== '' && (
-          <p>No results found for "{searchTerm}"</p>
-      )}
     </div>
   );
 }
