@@ -37,6 +37,7 @@ function Hero({ searchTerm, handleSearchChange }) {
           <button type="submit" className={styles.FontAwesomeIconButton}>
             <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.FontAwesomeIcon} />
           </button>
+          <button className={styles.searchButton} >Search</button>
         </form>
       </div>
     </div>
