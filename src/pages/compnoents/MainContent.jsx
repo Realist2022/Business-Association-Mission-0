@@ -1,4 +1,3 @@
-// src/components/MainContent/MainContent.js
 import React from "react";
 import styles from '../compnoents/MainContent.module.css'; 
 

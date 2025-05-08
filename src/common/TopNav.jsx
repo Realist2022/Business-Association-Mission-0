@@ -25,7 +25,7 @@ function TopNav() {
       <img src={logo} className={styles.logo} alt="Company Logo" />
 
       {/* HAMBURGER/XMARK MENU ICON */}
-      <div className={styles["menu-icon"]} onClick={toggleMenu}>
+      <div className={styles["menu-icon"]} onClick={toggleMenu}> {/* Had to use [] for menu-icon because of hyphen */}
         {isOpen ? (
           // Show Xmark when menu is open
           <FontAwesomeIcon icon={faXmark} />
@@ -36,8 +36,7 @@ function TopNav() {
       </div>
 
       {/* TOP NAV CONTENT AND LOGIN */}
-      {/* apply 'open' class from CSS if isOpen is true */}
-      {/* div will be hidden/shown on mobile based on this class and CSS */}
+
       <div className={`${styles.loginAndNav} ${isOpen ? styles.open : ''}`}>
         <a href="#home" onClick={closeMenu}>Home</a>
         <a href="#news" onClick={closeMenu}>News</a>
