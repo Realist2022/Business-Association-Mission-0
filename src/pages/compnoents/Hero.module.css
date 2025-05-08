@@ -13,7 +13,7 @@
 
 .heroTitle {
   font-size: 6rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   color: white;
   font-style: normal;
@@ -23,7 +23,7 @@
 .heroSubTitle {
   font-size: 2rem;
   color: rgb(255, 40, 0);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-style: normal;
   text-shadow: 2px 2px 4px #000000;
@@ -43,7 +43,7 @@
   padding: 20px;
 }
 
-.heroInput{
+.heroInput {
   margin-top: 150px;
   width: 18rem;
   height: 50px;
@@ -51,17 +51,17 @@
   padding: 0 20px;
   font-size: 1.2rem;
   border: 2px solid rgb(255, 40, 0);
-  box-shadow: 0 0 15px 5px rgba(255, 40, 0, 0.7); 
+  box-shadow: 0 0 15px 5px rgba(255, 40, 0, 0.7);
   outline: none;
 }
 
-.FontAwesomeIcon{
+.FontAwesomeIcon {
   margin-left: 10px;
   color: white;
   cursor: pointer;
 }
 
-.FontAwesomeIconButton{
+.FontAwesomeIconButton {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -70,7 +70,6 @@
 }
 
 @media (max-width: 900px) {
-
   .heroTitle {
     font-size: 3rem;
   }
@@ -79,9 +78,67 @@
     font-size: 1.2rem;
   }
 
-
   .heroContent {
     width: 90%;
     padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroContainer {
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .heroImage {
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .heroContent {
+    width: 95%;
+    padding: 5px;
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubTitle {
+    font-size: 1rem;
+  }
+
+  .heroInput {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .FontAwesomeIconButton {
+    display: none;
+  }
+
+  .searchButton {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 40px;
+    font-size: 0.9rem;
+    background-color: rgb(255, 40, 0);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 500px) {
+  .searchButton {
+    display: none;
   }
 }
