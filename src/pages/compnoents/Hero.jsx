@@ -11,7 +11,7 @@ function Hero({ searchTerm, handleSearchChange }) {
   // Function to handle form submission
   const handleSearchSubmit = (event) => {
     event.preventDefault(); // Prevent page reload
-    console.log("Search button clicked for:", searchTerm);
+    console.log("Search button clicked for:", searchTerm); // Log the search term, could update with another function later maybe/ maybe not..?
   };
 
   return (
@@ -34,10 +34,12 @@ function Hero({ searchTerm, handleSearchChange }) {
             // Use the handleSearchChange prop for the onChange event
             onChange={handleSearchChange}
           />
+          {/* FONT AWESOME SEARCH BUTTON ICON */}
           <button type="submit" className={styles.FontAwesomeIconButton}>
             <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.FontAwesomeIcon} />
           </button>
-          <button className={styles.searchButton} >Search</button>
+          {/* SEARCH BUTTON WITH WRITING */}
+          <button type="submit" className={styles.searchButton} >Search</button>
         </form>
       </div>
     </div>
